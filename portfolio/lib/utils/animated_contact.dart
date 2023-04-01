@@ -65,7 +65,10 @@ class _AnimatedContactState extends State<AnimatedContact> {
                 Text(widget.title, style: TextStyle(
                   fontSize: 18.0, fontWeight: FontWeight.w500
                 ),),
-                Text(widget.subtitle)
+                Text(widget.subtitle,
+                  style: TextStyle(
+                      fontSize: 12.0, fontWeight: FontWeight.w500
+                  ),)
               ],
             )
           ],

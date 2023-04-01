@@ -17,19 +17,25 @@ class _EducationState extends State<Education> {
       margin: EdgeInsets.only(top: 20.0),
       width: context.screenWidth < 900
           ? context.screenWidth * 0.9
-          : context.screenWidth * 0.5,
+          :context.screenWidth < 1600
+          ? context.screenWidth * 0.5
+          : context.screenWidth * 0.4 ,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
         color: Colors.blue.shade50,
       ),
+      height: 900,
       padding: EdgeInsets.all(30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Education",
+          const Text("Education",
             style: TextStyle(
                 fontSize: 24.0, fontWeight: FontWeight.w600
             ),
+          ),
+          const SizedBox(
+            height: 12.0,
           ),
           //
           Timeline.tileBuilder(
@@ -46,14 +52,14 @@ class _EducationState extends State<Education> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                           "2022",
                       style: TextStyle(
                         fontSize: 12.0,
                         color: Colors.indigo
                       ),
                       ),
-                      Text(
+                      const Text(
                           "S.Y.BTech",
                       style: TextStyle(
                         fontSize: 20.0,
