@@ -1,0 +1,89 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:timelines/timelines.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+class Education extends StatefulWidget {
+  const Education({Key? key}) : super(key: key);
+
+  @override
+  State<Education> createState() => _EducationState();
+}
+
+class _EducationState extends State<Education> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 20.0),
+      width: context.screenWidth < 900
+          ? context.screenWidth * 0.9
+          : context.screenWidth * 0.5,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        color: Colors.blue.shade50,
+      ),
+      padding: EdgeInsets.all(30.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Education",
+            style: TextStyle(
+                fontSize: 24.0, fontWeight: FontWeight.w600
+            ),
+          ),
+          //
+          Timeline.tileBuilder(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+              builder: TimelineTileBuilder.fromStyle(
+                itemCount: 4,
+                contentsAlign: ContentsAlign.alternating,
+                contentsBuilder: (context, index) {
+            return Card(
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                          "2022",
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        color: Colors.indigo
+                      ),
+                      ),
+                      Text(
+                          "S.Y.BTech",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      ),
+                      Text(
+                        "SVERI's College of Engineering",
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.grey.shade700
+                        ),
+                      ),
+                      Text(
+                        "91.51 % (10 CGPA)",
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.grey.shade700
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+              )
+          )
+        ],
+      ),
+    );
+  }
+}
