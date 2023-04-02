@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/utils/animated_contact.dart';
@@ -16,7 +15,7 @@ class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20.0,),
+      margin: const EdgeInsets.only(top: 20.0,),
       width: context.screenWidth < 900
           ? context.screenWidth * 0.9
           :context.screenWidth < 1600
@@ -27,42 +26,42 @@ class _AboutState extends State<About> {
         color: Colors.blue.shade50,
       ),
       height: 900,
-      padding: EdgeInsets.all(30.0),
+      padding: const EdgeInsets.all(30.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             children: [
-              Image(image: AssetImage("assets/images/dev.png"),height: 156.0,),
-              Text("Hi it's Mustkeem",
+              const Image(image: AssetImage("assets/images/dev.png"),height: 156.0,),
+              const Text("Hi it's Mustkeem",
                 style: TextStyle(
                     fontSize: 30.0, fontWeight: FontWeight.w600
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6.0,
               ),
-              Text("Student, Explorer, Leader",
+              const Text("Student, Explorer, Leader",
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10.0,
               ),
-              Text("As a computer Science student pursuing penultimate "
+              const Text("As a computer Science student pursuing penultimate "
                   "year want to secure good position in MNC companies "
                   "with programming skills in JAVA and Flutter, Databases "
                   "MySQL, Firebase and Amazon AWS after completion of my "
                   "graduation",
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10.0,
               ),
               Wrap(
                 alignment: WrapAlignment.center,
                 spacing: 8.0,
                 runSpacing: 8.0,
-                children: [
+                children: const [
                   Chip(label: Text("Flutter Developer"),
                     labelStyle: TextStyle(
                         color: Colors.white,
@@ -83,7 +82,7 @@ class _AboutState extends State<About> {
                   ),
                 ],
               ),
-              Divider(),
+              const Divider(),
               AnimatedContact(
                   iconData: FontAwesomeIcons.linkedin,
                   title: "LinkedIn",
@@ -99,7 +98,7 @@ class _AboutState extends State<About> {
           ),
           //
           Column(
-            children: [
+            children: const [
               Divider(),
               SocialRow(),
             ],

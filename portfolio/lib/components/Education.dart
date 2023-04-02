@@ -38,55 +38,57 @@ class _EducationState extends State<Education> {
             height: 12.0,
           ),
           //
-          Timeline.tileBuilder(
-            shrinkWrap: true,
-            scrollDirection: Axis.vertical,
-              builder: TimelineTileBuilder.fromStyle(
-                itemCount: 4,
-                contentsAlign: ContentsAlign.alternating,
-                contentsBuilder: (context, index) {
-            return Card(
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                          "2022",
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.indigo
-                      ),
-                      ),
-                      const Text(
-                          "S.Y.BTech",
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      ),
-                      Text(
-                        "SVERI's College of Engineering",
+          Center(
+            child: Timeline.tileBuilder(
+              shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                builder: TimelineTileBuilder.fromStyle(
+                  itemCount: 3,
+                  contentsAlign: ContentsAlign.alternating,
+                  contentsBuilder: (context, index) {
+              return Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                            "2022",
                         style: TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.grey.shade700
+                          fontSize: 12.0,
+                          color: Colors.indigo
                         ),
-                      ),
-                      Text(
-                        "91.51 % (10 CGPA)",
+                        ),
+                        const Text(
+                            "S.Y.BTech",
                         style: TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.grey.shade700
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
                         ),
-                      ),
-                    ],
+                        ),
+                        Text(
+                          "SVERI's College of Engineering",
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.grey.shade700
+                          ),
+                        ),
+                        Text(
+                          "91.51 % (10 CGPA)",
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.grey.shade700
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            );
-          },
-              )
+              );
+            },
+                )
+            ),
           )
         ],
       ),

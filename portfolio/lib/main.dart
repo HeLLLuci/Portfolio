@@ -5,7 +5,7 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:timelines/timelines.dart';
 
-import '../HomeScreen.dart';
+import 'HomeScreen.dart';
 
 void main(){
   runApp(MyApp());
